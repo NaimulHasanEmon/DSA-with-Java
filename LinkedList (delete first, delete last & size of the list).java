@@ -1,13 +1,19 @@
-public class Main {
+public class LL {
     Node head;
+    private int size;
 
-    static class Node {
+    LL() {
+        this.size = 0;
+    }
+
+    class Node {
         int data;
         Node next;
 
         Node(int data) {
             this.data = data;
             this.next = null;
+            size++;
         }
     }
 
@@ -40,6 +46,7 @@ public class Main {
             return;
         }
         head = head.next;
+        size--;
     }
 
     public void deleteLast() {
@@ -47,17 +54,18 @@ public class Main {
             System.out.println("List is empty.\n");
             return;
         }
+        size--;
         if (head.next == null) {
             head = null;
             return;
         }
-        Node secondlastNode = head;
+        Node secondLastNode = head;
         Node lastNode = head.next;
-        if (lastNode.next != null) {
-            secondlastNode = lastNode;
+        while (lastNode.next != null) {
+            secondLastNode = secondLastNode.next;
             lastNode = lastNode.next;
         }
-        secondlastNode.next = null;
+        secondLastNode.next = null;
     }
 
     public void printList() {
@@ -73,17 +81,23 @@ public class Main {
         System.out.println("NULL");
     }
 
+    public int getSize() {
+        return size;
+    }
+
     public static void main(String[] args) {
-        Main list = new Main();
+        LL list = new LL();
         list.addFirst(2);
         list.printList();
         list.addFirst(1);
         list.printList();
         list.addLast(3);
         list.printList();
+        System.out.println("Now list size is = " + list.getSize());
         list.deleteFirst();
         list.printList();
         list.deleteLast();
         list.printList();
+        System.out.println("Now list size is = " + list.getSize());
     }
 }

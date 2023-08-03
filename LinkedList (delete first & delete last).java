@@ -51,13 +51,13 @@ public class Main {
             head = null;
             return;
         }
-        Node secondLastNode = head;
-        Node LastNode = head.next;
-        if (LastNode.next != null) {
-            secondLastNode = LastNode;
-            LastNode = LastNode.next;
+        Node secondlastNode = head;
+        Node lastNode = head.next;
+        if (lastNode.next != null) {
+            secondlastNode = lastNode;
+            lastNode = lastNode.next;
         }
-        secondLastNode.next = null;
+        secondlastNode.next = null;
     }
 
     public void printList() {

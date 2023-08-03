@@ -1,17 +1,17 @@
-public class LL {
+public class Main {
     Node head;
 
-    static class Node {
-        int data;
+    class Node {
+        String data;
         Node next;
 
-        Node(int data) {
+        Node(String data) {
             this.data = data;
             this.next = null;
         }
     }
 
-    public void addFirst(int data) {
+    public void addFirst(String data) {
         Node newNode = new Node(data);
         if (head == null) {
             head = newNode;
@@ -21,7 +21,7 @@ public class LL {
         head = newNode;
     }
 
-    public void addLast(int data) {
+    public void addLast(String data) {
         Node newNode = new Node(data);
         if (head == null) {
             head = newNode;
@@ -40,19 +40,17 @@ public class LL {
         }
         Node currNode = head;
         while (currNode != null) {
-            System.out.print(currNode.data + " -> ");
+            System.out.print(currNode.data + " ");
             currNode = currNode.next;
         }
-        System.out.println("NULL");
+        System.out.println(" -> NULL");
     }
 
     public static void main(String[] args) {
         LL list = new LL();
-        list.addFirst(3);
-        list.addFirst(2);
-        list.addFirst(1);
-        list.addLast(4);
-        list.addLast(5);
+        list.addFirst("Hasan");
+        list.addFirst("Md. Naimul");
+        list.addLast("Emon");
         list.printList();
     }
 }

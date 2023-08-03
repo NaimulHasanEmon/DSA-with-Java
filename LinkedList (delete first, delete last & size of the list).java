@@ -59,13 +59,17 @@ public class Main {
             head = null;
             return;
         }
-        Node secondLastNode = head;
+        Node secondlastNode = head;
         Node lastNode = head.next;
-        while (lastNode.next != null) {
-            secondLastNode = secondLastNode.next;
+        if (lastNode.next != null) {
+            secondlastNode = lastNode;
             lastNode = lastNode.next;
         }
-        secondLastNode.next = null;
+        secondlastNode.next = null;
+    }
+
+    public int getSize() {
+        return size;
     }
 
     public void printList() {
@@ -81,10 +85,6 @@ public class Main {
         System.out.println("NULL");
     }
 
-    public int getSize() {
-        return size;
-    }
-
     public static void main(String[] args) {
         Main list = new Main();
         list.addFirst(2);
@@ -97,6 +97,9 @@ public class Main {
         list.deleteFirst();
         list.printList();
         list.deleteLast();
+        list.printList();
+        System.out.println("Now list size is = " + list.getSize());
+        list.addFirst(10);
         list.printList();
         System.out.println("Now list size is = " + list.getSize());
     }

@@ -1,8 +1,8 @@
-public class LL {
+public class Main {
     Node head;
     private int size;
 
-    LL() {
+    Main() {
         this.size = 0;
     }
 
@@ -86,7 +86,7 @@ public class LL {
     }
 
     public static void main(String[] args) {
-        LL list = new LL();
+        Main list = new Main();
         list.addFirst(2);
         list.printList();
         list.addFirst(1);

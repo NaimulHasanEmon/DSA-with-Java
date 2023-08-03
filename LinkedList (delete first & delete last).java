@@ -54,7 +54,7 @@ public class Main {
         Node secondLastNode = head;
         Node LastNode = head.next;
         if (LastNode.next != null) {
-            secondLastNode = secondLastNode.next;
+            secondLastNode = LastNode;
             LastNode = LastNode.next;
         }
         secondLastNode.next = null;

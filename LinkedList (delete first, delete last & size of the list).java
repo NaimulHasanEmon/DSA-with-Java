@@ -42,7 +42,7 @@ public class Main {
 
     public void deleteFirst() {
         if (head == null) {
-            System.out.println("List is empty.\n");
+            System.out.println("List is empty.");
             return;
         }
         head = head.next;
@@ -51,7 +51,7 @@ public class Main {
 
     public void deleteLast() {
         if (head == null) {
-            System.out.println("List is empty.\n");
+            System.out.println("List is empty.");
             return;
         }
         size--;

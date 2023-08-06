@@ -17,6 +17,6 @@ class Main {
         }
         System.out.println("Reversed List: " + list2);
 
-        // Time complexity O(n);
+        // Time complexity O(n) and extra spaces;
     }
 }

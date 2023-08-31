@@ -6,7 +6,7 @@ public class Main {
             while (i <= j && arr[i] <= pivot) {
                 i++;
             }
-            while (arr[j] > pivot) {
+            while (i <= j && arr[j] > pivot) {
                 j--;
             }
             if (i < j) {
@@ -40,9 +40,8 @@ public class Main {
         int n = arr.length;
         System.out.print("Original array: ");
         printArray(arr, n);
-        System.out.println();
         quickSort(arr, 0, n - 1);
-        System.out.print("Sorted array: ");
+        System.out.print("\nSorted array: ");
         printArray(arr, n);
     }
 }

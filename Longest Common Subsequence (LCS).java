@@ -1,4 +1,4 @@
-public class Solution {
+public class Main {
     public static String LongestCommonSubsequence(String a, String b, int m, int n) {
         int[][] T = new int[m + 1][n + 1];
         for (int i = 0; i < m + 1; i++) {

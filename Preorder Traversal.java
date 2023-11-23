@@ -1,4 +1,4 @@
-public class Solution {
+public class Main {
     static class Node {
         int data;
         Node left;
